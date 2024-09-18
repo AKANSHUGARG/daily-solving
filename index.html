@@ -1,0 +1,106 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Document</title>  
+    <style>
+        #root3{
+            background-color: aquamarine;
+            border: 2px solid rgb(248, 5, 45);
+            width: 50%;
+            display: none;
+        }
+
+        body{
+            color:black;
+            background-color: aliceblue;
+        }
+
+        .dark{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>  
+<body>
+
+    <h1>Hello</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia quis doloremque eaque animi mollitia sint deleniti placeat aut earum sunt libero suscipit, alias veritatis? Dolorem eligendi nisi quia in qui perspiciatis, maxime iure quae, quam adipisci nostrum exercitationem nemo? Corporis.</p>
+
+    <button onclick="mode()">Change mode</button>
+    
+    <div id="root3">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor veritatis totam nihil obcaecati iusto cupiditate natus aspernatur accusantium amet aliquam distinctio repellendus earum quas unde ut aperiam, molestiae excepturi eius.</p>
+    </div>
+
+    <button onclick="change3()" id="root31">
+        show contnet
+    </button>
+
+
+    <p id="root1">  
+        
+    </p> 
+    <button onclick="change1()">submit</button>
+
+    <p id="root2">  
+        welcome
+    </p> 
+    <button onclick="change2()">submit1</button>
+
+    
+    
+    <script> 
+    var count=0;
+    function change1(){
+        count+=1;
+        document.getElementById("root1").innerHTML=count;
+    } 
+
+    function change2(){
+        var a=document.getElementById("root2");
+        if(a.innerHTML==="hello"){
+            a.innerHTML="why";
+        }
+
+        else{
+            a.innerHTML="hello";
+        }
+    }
+        // function change() { // Changed 'Change' to 'change'
+        //      document.getElementById("root").innerHTML="Akanshu";  
+        //     // alert("welcome");  
+        // }  
+
+
+
+        function change3(){
+            var a=document.getElementById("root3");
+            var t=document.getElementById("root31");
+            if(a.style.display==="none"){
+                a.style.display="block";
+                t.innerHTML="hide"
+            }
+            else{
+                a.style.display="none";
+                t.innerHTML="show";
+            }
+        }
+
+        function change31(){
+            var x=document.getElementById("root3");
+            if(a.style.display==="none"){
+                x
+            }
+        }
+
+
+        function mode(){
+            var a=document.body;
+            // a.classList.toggle("dark");
+            a.classList.add("dark");
+        }
+    </script>  
+</body>  
+</html>
