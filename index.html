@@ -6,7 +6,7 @@
     <title>Document</title>  
     <style>
         #root3{
-            background-color: aquamarine;
+            background-color: rgb(70, 215, 167);
             border: 2px solid rgb(248, 5, 45);
             width: 50%;
             display: none;
@@ -15,8 +15,7 @@
         body{
             color:black;
             background-color: aliceblue;
-        }
-
+        }0
         .dark{
             background-color: black;
             color: aliceblue;
@@ -24,6 +23,14 @@
     </style>
 </head>  
 <body>
+
+    <button id="btn1" onmouseover="hide2()"> click here</button>
+    <button id="btn2" onmouseover="hide1()"> Show more</button>
+
+    <!-- <input type="radio" name="bocolor" ondblclick="fillc()" id="bg1">Green
+    <input type="radio" name="bocolor" ondblclick="fillc()" id="bg2">Blue
+    <input type="radio" name="bocolor" ondblclick="fillc()" id="bg3">Black
+    <input type="radio" name="bocolor" ondblclick="fillc()" id="bg4">red -->
 
     <h1>Hello</h1>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia quis doloremque eaque animi mollitia sint deleniti placeat aut earum sunt libero suscipit, alias veritatis? Dolorem eligendi nisi quia in qui perspiciatis, maxime iure quae, quam adipisci nostrum exercitationem nemo? Corporis.</p>
@@ -100,6 +107,34 @@
             var a=document.body;
             // a.classList.toggle("dark");
             a.classList.add("dark");
+        }
+
+        // function fillc(){
+        //     if(document.getElementById("bg1").checked==true){
+        //         document.getElementById().style.backgroundColor="green";
+        //     }
+        // }
+
+        document.getElementById("btn2").style.visibility="hidden";
+        function hide1(){
+            document.getElementById("btn1").style.visibility="hidden";
+            document.getElementById("btn2").style.visibility="visible";
+        }
+        function hide2(){
+            document.getElementById("btn1").style.visibility="hidden";
+            document.getElementById("btn2").style.visibility="visible";
+        }
+
+        var header=document.getElementById("activeness");
+        console.log(header);
+        var btns=header.getElementsByClassName("btn");
+        console.log(btns);
+        for(var i=0;i<btns.length();i++){
+            btns[i].addEventListener("click",function(){
+                var c=document.getElementsByClassName("active");
+                c[0].className=c[0].className.replace("active","");
+                this.className+="active";
+            });
         }
     </script>  
 </body>  
