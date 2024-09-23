@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Select a color:</h2>
+
+    <div>
+        <input type="radio" id="red" name="color" value="red">
+        <label for="red">red</label>
+
+        <input type="radio" id="green" name="color" value="green">
+        <label for="green">green</label>
+ 
+        <input type="radio" id="yellow" name="color" value="yellow">
+        <label for="yellow">yellow</label>
+
+        <input type="radio" id="blue" name="color" value="blue">
+        <label for="blue">blue</label>
+    </div>
+
+    <script>
+        var a=document.getElementById("yellow");
+        var b=document.getElementById("blue");
+        var c=documnet.getElementById("green");
+        var d=document.getElementById("red");
+
+        a.style.accentColor = a.value;
+        b.style.accentColor = b.value;
+        c.style.accentColor = c.value;
+        d.style.accentColor = d.value;
+    </script>
+</body>
+</html>
