@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +9,34 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="root"></p>
-    <script type="module">
-        import data from './data.json' with {type:"json"};
-        document.getElementById("root").innerHTML=JSON.stringify(data);
+    <form name="loginform" onsubmit="return validate()">
+        Username: <input type="text" name="uname"> <br>
+        Password: <input type="password" name="pwd"><br>
+        <input type="submit" value="SUBMIT">
+    </form>
+    <p id="error" style="color: red;"></p>
+
+
+        <script>
+        // Storing user data in localStorage
+        localStorage.user = JSON.stringify({ name: "Ram", password: "12345" });
+        let user = JSON.parse(localStorage.user);
+        // Validate function to check username and password
+        function validate() {
+            let u = document.loginform.uname.value;
+            let p = document.loginform.pwd.value;
+            // Check if entered username and password match the stored data
+            if (u === user.name && p === user.password) {
+                alert("Login Successful");
+                return true; // Allow form submission
+            } else {
+                document.getElementById("error").textContent = "Invalid user password";
+                return false; // Prevent form submission
+            }
+        }
     </script>
+
+
+
 </body>
 </html>
