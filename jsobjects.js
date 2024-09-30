@@ -27,3 +27,6 @@ console.log(data);
 for(x in data){
     console.log(x),data[x];
 }
+
+
+document.getElementById("root").innerHTML=JSON.stringify(data);
